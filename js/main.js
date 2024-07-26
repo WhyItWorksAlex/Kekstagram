@@ -1,3 +1,4 @@
+import {photoDescriptions} from './photo-description.js';
 import {getPicturesData} from './api.js';
 import {createThumbnails} from './thumbnail.js';
 import {initGalleryFilters} from './gallery.js';
@@ -11,6 +12,9 @@ getPicturesData()
   })
   .catch(() => {
     showUploadErrorMessage();
+    createThumbnails(photoDescriptions);
+    initGalleryFilters(photoDescriptions);
   });
+
 
 initModal();

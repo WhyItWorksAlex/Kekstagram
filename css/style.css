@@ -229,6 +229,12 @@ main {
   display: flex;
 }
 
+.picture:hover .picture__img,
+.picture:focus .picture__img {
+  transform: scale(1.05);
+  border: 1px solid rgb(250, 223, 73);
+}
+
 .picture__comments,
 .picture__likes {
   padding-left: 30px;
@@ -910,13 +916,14 @@ main {
 
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .social__comment {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -927,6 +934,11 @@ main {
         align-items: center;
 }
 
+.social__comment--new {
+  background-color: #e6e6e6;
+  border: 1px solid #a1a1a1;
+}
+
 .social__comment-count {
   padding-top: 20px;
   padding-left: 65px;
@@ -935,7 +947,8 @@ main {
 .social__comments-loader {
   padding: 0;
   padding-left: 65px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   position: relative;
 
   text-align: left;
@@ -1070,15 +1083,24 @@ main {
   border: none;
 }
 
-.social__footer-btn:hover,
-.social__footer-btn:focus {
+.social__footer-btn--active {
+  background-image: url("../img/icon-send.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  color:#5da0ec;
+  opacity: 0.6;
+}
+
+.social__footer-btn--active:hover,
+.social__footer-btn--active:focus {
   opacity: 1;
 }
 
-.social__footer-btn:active,
-.social__footer-btn--active {
-  opacity: 1;
+.social__footer-btn--active:active {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
   background-position: -5px -149px;
+  opacity: 1;
 }
 
 
@@ -1257,6 +1279,7 @@ main {
   margin-bottom: 50px;
 
   font-size: 32px;
+  line-height: 35px;
 }
 
 .success__title {
